@@ -1,0 +1,46 @@
+{
+	"name": "backend",
+	"version": "0.1.0",
+	"main": "server.js",
+	"author": "Izuagbe Samuel",
+	"private": true,
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.1.3",
+		"express": "^4.18.2",
+		"express-async-handler": "^1.2.0",
+		"http-proxy-middleware": "^2.0.6",
+		"jsonwebtoken": "^9.0.0",
+		"mongoose": "^7.2.2"
+	},
+	"devDependencies": {
+		"concurrently": "^7.6.0",
+		"nodemon": "^2.0.22"
+	},
+	"scripts": {
+		"start": "node backend/server.js",
+		"server": "nodemon backend/server.js",
+		"client": "npm run dev --prefix ../frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
